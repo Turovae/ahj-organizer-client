@@ -1,5 +1,7 @@
 # Дипломное задание к курсу «Продвинутый JavaScript в браузере». Chaos Organizer
 ---
+[![Deploy static content to Pages](https://github.com/Turovae/ahj-organizer-client/actions/workflows/jekyll-gh-pages.yml/badge.svg)](https://github.com/Turovae/ahj-organizer-client/actions/workflows/jekyll-gh-pages.yml)
+---
 
 
 ###### tags: `netology` `advanced js in html`
