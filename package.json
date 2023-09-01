@@ -5,7 +5,8 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "watch": "tsc -w"
+    "watch": "tsc -w",
+    "lint": "eslint ."
   },
   "repository": "git@github.com:Turovae/ahj-organizer-client.git",
   "author": "TurovaE <ekaterina.turova@mail.ru>",
@@ -14,6 +15,8 @@
     "@babel/cli": "^7.22.10",
     "@babel/core": "^7.22.11",
     "@babel/preset-env": "^7.22.14",
+    "@babel/preset-react": "^7.22.5",
+    "@babel/preset-typescript": "^7.22.11",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.4.0",

@@ -1,4 +1,5 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+/* eslint-disable @typescript-eslint/no-var-requires */
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 
@@ -17,7 +18,7 @@ module.exports = {
         test: /\.tsx?$/,
         exclude: /node_modules/,
         use: {
-          loader: 'ts-loader',
+          loader: 'babel-loader',
         }
       },
       {

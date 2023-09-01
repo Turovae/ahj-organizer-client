@@ -9,5 +9,8 @@
         "sourceType": "module"
     },
     "rules": {
+        "semi": "off",
+        "@typescript-eslint/semi": "off",
+        "@typescript-eslint/comma-dangle": "off"
     }
 }
