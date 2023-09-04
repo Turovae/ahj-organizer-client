@@ -10,25 +10,14 @@ body {
   background-image: linear-gradient(180deg, #eae6df, #d1d7db);
 }
 
+
+
 #app {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  max-height: 100vh;
   background-color: #efeae2;
   max-width: 800px;
   margin: 0 auto;
-}
-
-.main {
-  position: relative;
-  flex: 1 1 0;
-}
-
-.btn-icon {
-  border: none;
-  outline: none;
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  margin-left: 8px;
 }
