@@ -1,7 +1,27 @@
+.message-wrapper {
+  display: flex;
+  /* justify-content: flex-end; */
+  flex-direction: column;
+}
+
 .message {
   background-color: #fff;
   margin: 10px 20px;
-  padding: 5px 10px;
+  padding: 5px 10px 10px;
   border-radius: 5px;
-  margin-right: 50px;
+  max-width: 85%;
+  align-self: flex-start;
+  position: relative;
+}
+
+.message.message-user {
+  align-self: flex-end;
+  background-color: #d9fdd3;
+}
+
+.message-timestamp {
+  font-size: 12px;
+  position: absolute;
+  bottom: 2px;
+  right: 5px;
 }
