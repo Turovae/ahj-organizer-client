@@ -1,22 +1,18 @@
-import React from "react";
-import ChaosIcon from "../img/chaos-logo.png";
-console.log(ChaosIcon);
+import React from 'react';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
-// const icon = new Image();
-// icon.src = ChaosIcon;
+import messages from '../base/messages.json';
+console.log(messages);
 
-export default function App() {
+function App (): React.ReactElement {
   return (
     <div id="app">
-      <header className="header">
-        <div className="header-logo">
-          <img src={ChaosIcon} />
-        </div>
-        <div className="header-title">Chaos Organizer</div>
-        <div className="header-search">Search</div>
-      </header>
+      <Header />
       <main className="main">I am main</main>
-      <footer className="footer">I am footer</footer>
+      <Footer />
     </div>
   );
 }
+
+export default App;

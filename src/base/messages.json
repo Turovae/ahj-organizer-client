@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "author": "you",
+    "title": "Message 1",
+    "content": "content message 1",
+    "timestamp": 1001
+  },
+  {
+    "id": 2,
+    "author": "bot",
+    "title": "Message 2",
+    "content": "content message 2",
+    "timestamp": 1005
+  },
+  {
+    "id": 3,
+    "author": "you",
+    "title": "Message 3",
+    "content": "content message 3",
+    "timestamp": 1010
+  }
+]
