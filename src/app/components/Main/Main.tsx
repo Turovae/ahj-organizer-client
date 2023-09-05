@@ -8,7 +8,7 @@ function Main ({ messages }: { messages: MessageProps[] }): React.ReactElement {
 
   useEffect(() => {
     (scrollFlag.current as unknown as HTMLElement).scrollIntoView();
-  }, []);
+  }, [messages]);
 
   return (
     <main className="main">
