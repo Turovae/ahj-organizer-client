@@ -31,7 +31,7 @@ let messages = [
     id: 5,
     isUser: true,
     title: 'Message 5',
-    content: 'content message 5: Lorem ipsum dolor sit amet consectetur adipisicing elit. Error rerum optio omnis veniam quasi repudiandae tenetur magni at voluptates debitis perferendis ipsum, alias voluptatem recusandae sunt iusto nisi, explicabo ullam?',
+    content: 'content message 5: https://google.com Lorem ipsum dolor sit amet consectetur https://google.com adipisicing elit. https://yandex.ru Error rerum optio omnis veniam quasi repudiandae tenetur magni at voluptates debitis perferendis ipsum, alias voluptatem recusandae sunt iusto nisi, explicabo ullam?',
     timestamp: 1020
   }
 ]
