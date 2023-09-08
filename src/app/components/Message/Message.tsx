@@ -1,4 +1,5 @@
 import React from 'react';
+import FileMsg from '../FileMsg/FileMsg';
 import './message.css';
 
 interface MessageProps {
@@ -23,6 +24,16 @@ function WrapLinks ({ msg }: { msg: string }): React.ReactElement {
 }
 
 function Message ({ message }: { message: MessageProps }): React.ReactElement {
+  if (message.content instanceof (File)) {
+    console.log(message.content);
+
+    const reader = new FileReader();
+
+    reader.addEventListener('load', (evt) => {
+      console.log(evt);
+    })
+  }
+
   return (
     <div className='message-wrapper'>
       <div className={message.isUser ? 'message message-user' : 'message'}>
@@ -33,7 +44,7 @@ function Message ({ message }: { message: MessageProps }): React.ReactElement {
           {
             (typeof message.content === 'string')
               ? <WrapLinks msg={message.content} />
-              : <div>{message.content.name}</div>
+              : <FileMsg file={message.content} />
           }
         </div>
         <div className='message-timestamp'>{message.timestamp}</div>

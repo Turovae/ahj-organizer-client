@@ -56,6 +56,5 @@
   margin: 0;
   width: 100%;
   opacity: 0;
-  cursor: pointer;
   z-index: -9999;
 }

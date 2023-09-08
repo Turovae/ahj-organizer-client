@@ -16,18 +16,18 @@ function Footer ({ onAddTextMsg, onAddFile }: {
   function handleChangeInput (event: ChangeEvent<HTMLInputElement>): void {
     event.preventDefault();
     setText(event.target.value);
-    console.log(text);
+    // console.log(text);
   }
 
   function handleSubmit (event: FormEvent): void {
     event.preventDefault();
-    console.log(event);
+    // console.log(event);
     onAddTextMsg(text);
     setText('');
   }
 
   function handleUploadClick (event: FormEvent): void {
-    console.log('click!');
+    // console.log('click!');
     inputFileRef.current?.click();
   }
 
@@ -37,6 +37,14 @@ function Footer ({ onAddTextMsg, onAddFile }: {
     }
 
     onAddFile(event.target.files[0]);
+
+    // const reader = new FileReader();
+
+    // reader.addEventListener('load', (evt) => {
+    //   console.log(evt);
+    // })
+
+    // reader.readAsText(event.target.files[0]);
   }
 
   return (
