@@ -9,14 +9,23 @@ function App (): React.ReactElement {
   const [messages, setMessages] = useState(messageService.getMessages());
 
   function handlerAddTextMsg (msg: string): void {
+    console.log(typeof msg);
+    console.log(typeof msg === 'string');
     setMessages(messageService.addMessage({ content: msg }));
+  }
+
+  function handlerAddFile (file: File): void {
+    console.log(file);
+    console.log(typeof file);
+    console.log(file instanceof File);
+    setMessages(messageService.addMessage({ content: file }))
   }
 
   return (
     <div id="app">
       <Header />
       <Main messages={messages} />
-      <Footer onAddTextMsg={handlerAddTextMsg} />
+      <Footer onAddTextMsg={handlerAddTextMsg} onAddFile={handlerAddFile} />
     </div>
   );
 }

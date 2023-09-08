@@ -1,4 +1,10 @@
-let messages = [
+let messages: Array<{
+  id: number
+  title: string
+  content: string | File
+  timestamp: number
+  isUser: boolean
+}> = [
   {
     id: 1,
     isUser: true,
@@ -41,7 +47,7 @@ let nextId = 6;
 interface MessageProps {
   id: number
   title: string
-  content: string
+  content: string | File
   timestamp: number
   isUser: boolean
 }
@@ -50,7 +56,7 @@ export function getMessages (): MessageProps[] {
   return messages;
 }
 
-export function addMessage (message: { content: string }): MessageProps[] {
+export function addMessage (message: { content: string | File }): MessageProps[] {
   const newMessage = {
     ...message,
     ...{
