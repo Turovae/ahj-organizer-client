@@ -1,3 +1,7 @@
+const URL = process.env.PUBLIC_URL;
+// console.log(URL);
+// console.log(process.env);
+
 let messages: Array<{
   id: number
   title: string
@@ -52,23 +56,39 @@ interface MessageProps {
   isUser: boolean
 }
 
-export function getMessages (): MessageProps[] {
-  return messages;
+export async function getMessages (): Promise<MessageProps[] | []> {
+  const response = await fetch(`${URL}/posts`);
+  // console.log(response);
+  if (response.ok) {
+    // console.log(response.body)
+    const data = await response.json();
+
+    // console.log(data);
+    return data;
+  }
+  return [];
 }
 
-export function addMessage (message: { content: string | File }): MessageProps[] {
-  const newMessage = {
-    ...message,
-    ...{
-      id: nextId,
-      title: `Message ${nextId}`,
-      timestamp: Date.now(),
-      isUser: true,
-    },
-  };
+// export function addMessage (message: { content: string | File }): MessageProps[] {
+//   let data;
 
-  messages = [...messages, newMessage];
-  nextId = nextId + 1;
+//   async function fetcher (): Promise<null> {
+//     const response = await fetch(`${URL}/posts`, {
+//       method: 'POST',
+//       body: message.content
+//     })
 
-  return messages;
-}
+//     if (response.ok) {
+//       data = await response.json();
+//       // console.log(data);
+//     }
+
+//     return null
+//   }
+
+//   // console.log(message);
+
+//   void fetcher();
+
+//   return null;
+// }
