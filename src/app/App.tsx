@@ -39,7 +39,7 @@ function App (): React.ReactElement {
     // setMessages(messageService.addMessage({ content: msg }));
 
     async function fetching (): Promise<null> {
-      const response = await fetch(`${URL}/posts`, {
+      const response = await fetch(`${URL}/posts/add`, {
         method: 'POST',
         body: msg
       })
@@ -61,6 +61,25 @@ function App (): React.ReactElement {
 
   function handlerAddFile (file: File): void {
     // setMessages(messageService.addMessage({ content: file }));
+    console.log(file);
+    const formData = new FormData();
+    formData.append('file', file);
+
+    async function fetching (): Promise<null> {
+      const response = await fetch(`${URL}/posts/upload`, {
+        method: 'POST',
+        body: formData
+      })
+
+      if (response.ok) {
+        const data = await response.json();
+        console.log(data);
+      }
+
+      return null;
+    }
+
+    void fetching();
   }
 
   function handleDragOver (event: React.DragEvent): void {
