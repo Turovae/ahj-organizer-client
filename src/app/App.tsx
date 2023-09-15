@@ -61,7 +61,7 @@ function App (): React.ReactElement {
 
   function handlerAddFile (file: File): void {
     // setMessages(messageService.addMessage({ content: file }));
-    console.log(file);
+    // console.log(file);
     const formData = new FormData();
     formData.append('file', file);
 
@@ -71,6 +71,7 @@ function App (): React.ReactElement {
         body: formData
       })
 
+      console.log(response)
       if (response.ok) {
         const data = await response.json();
         console.log(data);
